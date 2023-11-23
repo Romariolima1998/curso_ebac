@@ -1,0 +1,7 @@
+para efetuar instalaçao
+sudo pip install gunicorn
+
+para rodar
+gunicorn -w numeros_works nome_app:app
+ex
+gunicorn -w 4 hello_word:app

@@ -1,0 +1,20 @@
+
+sudo service postgresql start
+
+para abrir o sql no terminal
+sudo -i -u postgres
+
+para acessar a linha de comandos do postgres
+psql 
+
+lista BDS
+\l
+
+para se conectar a uma db
+\c nome_db
+
+comando para listar tabelas 
+\dt nome_eschema.*
+
+listar colunas
+\d+ schema.tabela

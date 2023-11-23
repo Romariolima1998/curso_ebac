@@ -1,0 +1,45 @@
+criar ponto de entrada pro junicorn
+nano wsgi.py
+
+e preencher com:
+
+from nome_modulo import application
+
+if __name__ == '__main__':
+    application.run()
+
+
+para testar gunicorn
+gunicorn --bind 0.0.0.0:8000 wsgi
+
+
+
+
+
+tranformar application em serviço linux
+
+adicionando a aplicaçao como um serviço
+sudo nano /etc/systemd/system/firstproject.service
+
+preencha com:
+
+[Unit]
+Description=Gunicorn instance to serve firstproject
+After=network.target
+
+[Service]
+User=r1chuck
+Group=r1chuck
+WorkingDirectory=/home/r1chuck/firstproject
+Environment="PATH=/home/r1chuck/firstproject/env/bin"
+ExecStart=/home/r1chuck/firstproject/env/bin/gunicorn --workers unix:firstproject.sock	-m 007 wsgi
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+para iniciar o processo
+sudo systemctl enable firstproject
+sudo systemctl start firstproject

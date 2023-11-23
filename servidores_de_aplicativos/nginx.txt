@@ -1,0 +1,14 @@
+instalando apache
+sudo -y install nginx
+
+para habilitar o serviço
+systemctl enable nginx
+
+para iniciar
+systemctl start nginx
+
+para ver o status
+systemctl status nginx
+
+para parar
+systemctl stop nginx

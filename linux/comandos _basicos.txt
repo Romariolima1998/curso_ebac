@@ -1,0 +1,106 @@
+para saber em qual pasta esta
+pwd
+
+lista todos os diretorios da pasta
+ll 
+tambem lista de outras pasta
+ll Documentos/
+
+limpar terminal
+clear
+
+acessar pastas 
+cd pasta
+
+voltar pasta
+cd ..
+
+criar pasta
+mkdir nome_da_pasta
+
+criar arquivo
+touch nomedoarquivo+extençao
+
+visualizar processos que estao sendo execultados
+ps aux
+
+
+ex
+usuario = r1chuck
+nome do usuario da maquina
+
+
+
+
+para visualizar grupos que usuario tem 
+groups usuario
+
+adicionando usuarios em um grupo / e preciso deslogar e logar novamente
+sudo usermod -a -G nome_grupo nome_usuario
+
+para retirar uma permissao de um grupo
+sudo chmod g-sigla_permissao nome_arquivo
+ex
+sudo chmod g-w finance.data
+
+para dar permissao read write a um arquivo
+sudo chmod ug+rw nome_arquivo
+
+
+
+para editar arquivos 'editor de texto'
+vi nome_arquivo
+e
+nano nome_arquivo
+
+para mais funcionalidades
+vim nome_arquivo
+
+
+
+
+para copiar um arquivo
+cp nome_arquivo ../nome_diretorio
+
+para copiar uma pasta
+cp -r nome_diretorio nome_diretorio_destino/
+
+
+
+para mover arquivo
+mv nome_arquivo ../pasta_destino
+
+para mover pasta 
+mv nome_pasta/ nome_pasta_destino
+
+
+deletar arquivo
+rm nome_arquivo
+
+deletar pasta
+rm -r nome_pasta
+
+deletar pasta com arquivos
+rm -rf nome_pasta
+
+
+
+comandos para intalaçaod pacotes no centos7
+yum -y install nome_pacote
+
+
+
+instalando apache
+sudo -y install httpd
+
+para habilitar o serviço
+systemctl enable httpd
+
+para iniciar
+systemctl start httpd
+
+para ver o status
+systemctl status httpd
+
+para parar
+systemctl stop httpd

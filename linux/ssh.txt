@@ -1,0 +1,2 @@
+para se conectar a uma maquina
+ssh nome_maquina@ip -p porta
